@@ -31,8 +31,8 @@ archivesBaseName = 'aether'
 java.toolchain.languageVersion = JavaLanguageVersion.of(8) // Mojang ships Java 8 to end users, so your mod should target Java 8.
 
 minecraft {
-    //mappings channel: 'official', version: project.mappings
-    mappings channel: 'snapshot', version: '20210309-1.16.5'
+    mappings channel: 'official', version: project.mappings
+    //mappings channel: 'snapshot', version: '20210309-1.16.5'
 
 
     accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
@@ -164,8 +164,4 @@ publishing {
 
 mixin {
     add sourceSets.main, "aether.refmap.json"
-}
-
-tasks.named('createMcpToSrg').configure {
-    enabled = false
 }
