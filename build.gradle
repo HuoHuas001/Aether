@@ -163,3 +163,7 @@ publishing {
 mixin {
     add sourceSets.main, "aether.refmap.json"
 }
+
+tasks.named('createMcpToSrg').configure {
+    enabled = false
+}
